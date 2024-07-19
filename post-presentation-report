@@ -1,0 +1,40 @@
+### Post-Presentation Report
+
+**Q1) Functionality of Masked Attention in Transformers**
+
+In Transformer models, Masked Attention plays a crucial role in handling sequence data. It is particularly important in tasks such as language modeling, where preventing the model from referencing future information when predicting the next word is essential. Masked Attention is used for the following purposes:
+
+1. **Blocking Future Information**: Masked Attention masks tokens beyond the current position in the sequence, ensuring the model can only refer to tokens before the current position. This helps the language model learn correctly.
+2. **Language Modeling**: Primarily used in Transformer-based language models (e.g., GPT-3), it ensures that only preceding tokens are considered when predicting the next word in a sentence.
+3. **Sequence-to-Sequence Modeling**: Useful in tasks like translation, where it prevents the model from referencing future target words when predicting the target sequence.
+
+**Q2) Reasons Why Some Features of Transformers Are Superior to RNNs**
+
+1. **Parallel Processing**: Transformers can process the entire sequence at once, enabling parallel processing. In contrast, RNNs process sequences step-by-step sequentially.
+2. **Long-Term Dependency Handling**: RNNs struggle to maintain long-term dependencies as the sequence length increases. The Self-Attention mechanism in Transformers allows each word to interact directly with all other words in the sequence, addressing this issue and enabling easy extraction of distant information.
+3. **Learning Efficiency**: Transformers can learn more quickly, thanks to parallel processing, and can effectively train deeper networks.
+4. **Information Retention**: Unlike RNNs, Transformers do not rely on hidden states, thereby retaining all information at each layer without significant memory loss.
+
+**Q3) Disadvantages of Transformers**
+
+1. **Computational Cost**: The Self-Attention mechanism has a computational complexity of O(n^2), causing computational costs to rise significantly with longer sequences.
+2. **Memory Usage**: Memory usage is high due to the computation of interactions between all pairs of tokens.
+3. **Data Requirements**: Transformers generally perform well with large datasets, but their performance can degrade with smaller datasets.
+4. **Design Complexity**: Finding the optimal model involves tuning various hyperparameters and architectural designs, making the process complex and time-consuming.
+
+**Q4) Why Some Still Use CNNs**
+
+1. **Image Processing**: CNNs excel in image recognition and classification tasks by using filters to extract local features and preserving the spatial structure of images.
+2. **Efficiency**: Convolution operations are efficient, and CNNs can achieve good performance with fewer parameters, reducing computational costs and memory usage.
+3. **Specialized Tasks**: CNNs outperform in visual data tasks like images and videos, making them a preferred choice in those domains.
+4. **Transfer Learning**: Pre-trained CNN models can be easily adapted to various computer vision tasks through transfer learning.
+5. **Data Volume**: For tasks with smaller datasets, CNNs can be more convenient and effective.
+
+**Q5) Difference Between Word and Token**
+
+Words and tokens are fundamental units in natural language processing, each with distinct definitions and roles.
+
+- **Word**: The basic unit of natural language, typically separated by spaces or punctuation.
+- **Token**: A unit used to process text data, which can be a word, sub-word, or even a character. 
+
+For example, "Hello world!" consists of two words. Depending on the tokenizer, it can be divided into tokens such as ["Hello", "world", "!"] or ["Hel", "lo", "wor", "ld", "!"], which are then used as inputs to language models.
