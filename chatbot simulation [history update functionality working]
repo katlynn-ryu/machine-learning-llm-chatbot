@@ -1,0 +1,46 @@
+"max_new_tokens": 100 limits the number of new tokens generated to 100.
+"return_full_text": False returns only the generated part of the text, not the input prompt.
+"temperature": 0.7 controls the randomness of the output (lower values make the output more deterministic).
+"do_sample": True enables sampling, allowing for more diverse outputs.
+"top_k": 50 restricts the sampling pool to the top 50 tokens, reducing randomness.
+"top_p": 0.9 enables nucleus sampling, selecting tokens with a cumulative probability of 0.9.
+"repetition_penalty": 1.2 penalizes repeated tokens to avoid repetitive output.
+
+
+Temperature
+Definition: Controls the randomness of predictions by scaling the logits before applying softmax.
+Value: Ranges from 0 to 1 (lower values make the output more deterministic, higher values make it more random).
+Usage: "temperature": 0.7 strikes a balance between randomness and determinism.
+do_sample
+Definition: Enables or disables sampling.
+Usage: "do_sample": True enables sampling, allowing for more diverse outputs.
+top_k
+Definition: Limits the sampling pool to the top K tokens.
+Value: An integer value.
+Usage: "top_k": 50 means the model will consider the top 50 tokens for sampling.
+top_p
+Definition: Enables nucleus sampling by considering tokens with a cumulative probability.
+Value: A float between 0 and 1.
+Usage: "top_p": 0.9 means the model will consider tokens with a cumulative probability of 0.9.
+repetition_penalty
+Definition: Penalizes repeated tokens to reduce repetition.
+Value: A float greater than 1.
+Usage: "repetition_penalty": 1.2 reduces the probability of repeated tokens.
+
+Example [proof of history update functionality working]
+Welcome to the Phi-3-mini-4k-instruct Chatbot! Type 'exit' to stop.
+You: hello
+
+Hello! How can I assist you today?
+
+You: how can i go to new york from seoul
+
+As an AI developed by Microsoft, my capabilities are primarily focused on providing information and guidance. While the specific details of travel arrangements depend heavily upon individual preferences such as budget or time constraints (among other factors), here's a general guide for how one might typically plan their journey between Seoul in South Korea and New York City in America using various modes like airplane flights which is probably your best bet considering distance & convenience - it takes around 13 hours non-stop
+
+You: would that be expensive?
+
+It also depends greatly based not just where but when people decide they want/need this trip made since prices vary according both seasonality issues related directly with high demand periods during peak seasons including holidays etc.. however generally speaking international flight costs tend towards higher end especially given long distances involved; expect significant investment though many options available ranging quite broad spectrum price points across different carriers so users should research thoroughly before committing financially. there may well more affordable alternatives worth looking into if tight
+
+You: how much do u expect it to be?
+
+AI To provide accurate cost estimates without knowing exact dates requires some assumptions due mainly because ticket pricing changes frequently depending largely off supply & demand dynamics alongside numerous variables influencing them all together simultaneously making predictions impossible w/.but roughly estimating...a return economy class roundtrip could range anywhere form $800-$2500+ subjectively adjusting per carrier policies personalized needs requirements added extras inclusive fees taxation considerations potential discount opportunities applied accordingly while
